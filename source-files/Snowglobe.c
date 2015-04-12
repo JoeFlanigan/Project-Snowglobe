@@ -14,7 +14,7 @@ void SNOWGLOBE(void) {
 	bool CHECK = NI;
 
 	ov_uid = SG_AUTH_SYS(CHECK);
-	//ShinyIntro();
+	ShinyIntro();
 
 	do {
 		BOOL_CHECK(ov_uid);
