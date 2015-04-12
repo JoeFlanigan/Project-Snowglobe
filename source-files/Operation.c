@@ -9,12 +9,12 @@
 //     File Description	    => The main operation(s) of this tool
 //                             also from ATM.c/CALC.c on and on..
 
-char MAIN_OPERATION(char ov_menu_input, bool CHECK) {
+char MAIN_OPERATION(char ov_menu_input, bool CHECK, char *ov_uid) {
 	switch (ov_menu_input) {
-	case 'a': ov_menu_input = ATM(ov_menu_input, CHECK); break;
-	case 'e': STD_EXIT(); break;
-	case 'c': ov_menu_input = CALCULATOR(ov_menu_input, CHECK); break;
-	case 'm': ov_menu_input = MAINTENANCE_CENTER(ov_menu_input, CHECK); break;
+	case 'a': ov_menu_input = ATM(ov_menu_input, CHECK, ov_uid); break;
+	case 'e': STD_EXIT(ov_uid); break;
+	case 'c': ov_menu_input = CALCULATOR(ov_menu_input, CHECK, ov_uid); break;
+	case 'm': ov_menu_input = MAINTENANCE_CENTER(ov_menu_input, CHECK, ov_uid); break;
 	}
 
 	return (ov_menu_input);
@@ -102,12 +102,12 @@ int *ATM_OPERATION(float _atm_balance) {
 	return (atm_opa);
 }
 
-char MAINTENANCE_CENTER_OPERATION(char ov_menu_input) {
+char MAINTENANCE_CENTER_OPERATION(char ov_menu_input, char *ov_uid) {
 	switch (ov_menu_input) {
-	case 'e': STD_EXIT(); break;
-	case 'r': CONNECTION_REPAIR(); break;
-	case 'c': DISK_REPAIR_SCAN(); break;
-	case 'a': DISK_REPAIR_OPERATION(); break;
+	case 'e': STD_EXIT(ov_uid); break;
+	case 'r': CONNECTION_REPAIR(ov_uid); break;
+	case 'c': DISK_REPAIR_SCAN(ov_uid); break;
+	case 'a': DISK_REPAIR_OPERATION(ov_uid); break;
 	}
 
 	return (ov_menu_input);

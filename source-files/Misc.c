@@ -9,32 +9,44 @@
 //     File Description	    => Some misc functions I didn't wanted to
 //                             make own files for, so this is my trash bin
 
-void BOOL_CHECK(void) {
+const static char _get_prg_author[] = "Rebirth aka Joe Flanigan";
+const static char _get_prg_crdate[] = "09/04/2015";
+const static char _get_prjct_name[] = "Project Snowglobe";
+const static char _get_prjct_vers[] = "Version 0.5";
+const static char _get_prg_nspace[] = "--------------------------------------------------";
+
+void BOOL_CHECK(char *ov_uid) {
 	char zw_er;
 
 	if (!(__bool_true_false_are_defined)) {
-		TITLES();
+		TITLES(ov_uid);
 		system("color 4");
 		MISC_ERROR(ERR, "Hi, it looks like something is broken, please restart the application.\n");
 		printf("Press any key to continue.\n");
 		zw_er = getche();
-		STD_EXIT();
+		STD_EXIT(ov_uid);
 	}
 }
 
-void TITLES(void) {
+void TITLES(char *ov_uid) {
 	char _right_now[100];
-	const char _get_prg_author[] = "Rebirth aka Joe Flanigan";
-	const char _get_prg_crdate[] = "09/04/2015";
-	const char _get_prjct_name[] = "Project Snowglobe";
-	const char _get_prjct_vers[] = "Version 0.3";
-	const char _get_prg_nspace[] = "--------------------------------------------------";
 
 	BB_SHORT();
 	TIME_DEF(_right_now);
 	printf("	%s made by %s\n", _get_prjct_name, _get_prg_author);
 	printf("	 Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
-	printf("			%s\n", _right_now);
+	printf("	%s :: Logged in as %s\n", _right_now, ov_uid);
+	printf("	%s\n", _get_prg_nspace);
+}
+
+void SG_AUTH_SYS_TITLES(void) {
+	char _right_now[100];
+
+	BB_SHORT();
+	TIME_DEF(_right_now);
+	printf("	%s made by %s\n", _get_prjct_name, _get_prg_author);
+	printf("	 Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
+	printf("	     %s :: Not logged in\n", _right_now);
 	printf("	%s\n", _get_prg_nspace);
 }
 

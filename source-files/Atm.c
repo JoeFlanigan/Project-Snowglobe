@@ -10,27 +10,27 @@
 //                             assemble all operations used for the
 //                             ATM machine
 
-char ATM(char ov_menu_input, bool CHECK) {
+char ATM(char ov_menu_input, bool CHECK, char *ov_uid) {
 	int *_atm_opa;
 	float _atm_balance;
 
 	do {
-		TITLES();
-		_atm_balance = ATM_INPUT(CHECK);
+		TITLES(ov_uid);
+		_atm_balance = ATM_INPUT(CHECK, ov_uid);
 		if (_atm_balance < 0.05f) {
-			BB_ERROR();
+			BB_ERROR(ov_uid);
 			continue;
 		}
 		_atm_opa = ATM_OPERATION(_atm_balance);
 		ATM_OUTPUT(_atm_opa, _atm_balance);
-		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);
+		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
 		assert(ov_menu_input != NULL);
 	} while (ov_menu_input == 'r' || _atm_balance < 0.05f);
 
 	return (ov_menu_input);
 }
 
-float ATM_INPUT(bool CHECK) {
+float ATM_INPUT(bool CHECK, char *ov_uid) {
 	float atm_input;
 	int r;
 
@@ -39,7 +39,7 @@ float ATM_INPUT(bool CHECK) {
 		printf("\n	Input a number between 0 and 759000 => ");
 		r = scanf("%f", &atm_input);
 		fflush(stdin);
-		CHECK = ATM_INPUT_CTRL(atm_input, CHECK);
+		CHECK = ATM_INPUT_CTRL(atm_input, CHECK, ov_uid);
 	} while ((atm_input > ALM || atm_input < ALN)
 		|| (CHECK != FALSE));
 

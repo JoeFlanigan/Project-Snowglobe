@@ -16,17 +16,17 @@ void BB_SHORT(void) {
 	system("cls");
 }
 
-void BB_LOADING(void) {
-	TITLES();				
+void BB_LOADING(char *ov_uid) {
+	TITLES(ov_uid);				
 	printf("	Loading, please be patient.\n");
 	Sleep(BB);
 	BB_SHORT();
 }
 
-void BB_ERROR(void) {
+void BB_ERROR(char *ov_uid) {
 	char zw_er;
 
-	TITLES();
+	TITLES(ov_uid);
 	system("color 4");
 	printf("	Something went wrong. Possible cause(s)\n");
 	printf("	=> You've made an input mistake\n");
@@ -37,10 +37,10 @@ void BB_ERROR(void) {
 	BB_SHORT();
 }
 
-void BB_SUCCESS(void) {
+void BB_SUCCESS(char *ov_uid) {
 	char zw_er;
 
-	TITLES();
+	TITLES(ov_uid);
 	system("color 2");
 	printf("	The operation was successfully.\n");
 	printf("\n	Type anything to continue!\n");

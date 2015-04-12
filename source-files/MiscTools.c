@@ -8,20 +8,21 @@
 //                            
 //     File Description	    => MiscTools that have their own Sub-Menu
 
-char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK) {
+char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK, char *ov_uid) {
 	float fahrenheit, celsius;
 
 	do {
-		ov_menu_input = CELSIUS_FAHRENHEIT_MISCTOOL_MENU(ov_menu_input);
+		ov_menu_input = CELSIUS_FAHRENHEIT_MISCTOOL_MENU(ov_menu_input, ov_uid);
 		switch (ov_menu_input) {
-		case 'e': STD_EXIT();
+		case 'e': STD_EXIT(ov_uid);
 			break;
 		case 'c': do {
-					  TITLES();
+					  TITLES(ov_uid);
 					  printf("	Input in Celsius (0 - 299) => ");
+					  #pragma warning(suppress: 6031)
 					  scanf("%f", &celsius);
 					  if (celsius > CMXI || celsius < CMI) {
-						  BB_ERROR();
+						  BB_ERROR(ov_uid);
 						  continue;
 					  }
 					  fahrenheit = ((float)CTF(celsius));
@@ -29,19 +30,21 @@ char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK) {
 		} while (celsius > CMXI || celsius < CMI);
 			break;
 		case 'f': do {
-					  TITLES();
+					  TITLES(ov_uid);
 					  printf("	Input in fahrenheit (0 - 759) => ");
+					  #pragma warning(suppress: 6031)
 					  scanf("%f", &fahrenheit);
 					  if (fahrenheit > FMXI || fahrenheit < FMI) {
-						  BB_ERROR();
+						  BB_ERROR(ov_uid);
 						  continue;
 					  }
 					  celsius = ((float)FTC(fahrenheit));
 					  printf("\n	%.3f fahrenheit is equal to %.3f celsius.\n", fahrenheit, celsius);
+					  #pragma warning(suppress: 6001)
 		} while (celsius > FMXI || celsius < FMI);
 			break;
 		}
-		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);
+		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
 		assert(ov_menu_input != NULL);
 	} while (ov_menu_input == 'r');
 
