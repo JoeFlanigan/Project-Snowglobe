@@ -1,13 +1,13 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> Intro.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Intro.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => Never forget about snowglobe! This
+//                             awesome intro will make you help not to!
 
 void ShinyIntro(void) {
 	int j = NI;
@@ -63,62 +63,6 @@ void ShinyIntro(void) {
 		Sleep(ISG_L);
 		INC(j);
 		if (j < 6) continue;
-		//else if (j >= 6) SI = TRUE;
-		//if (SI == TRUE) {
-		//	SI = FALSE;
-		//	j = NI;
-		//	for (; 1;) {
-		//		BB_SHORT();
-		//		SHINY_INTRO_COLOUR_GEN();
-		//		printf("Test 1 1\n");
-		//		INC(j);
-		//		Sleep(ISG);
-		//		SHINY_INTRO_COLOUR_GEN();
-		//		printf("Test 1 2\n");
-		//		Sleep(ISG);
-		//		SHINY_INTRO_COLOUR_GEN();
-		//		printf("Test 1 3\n");
-		//		INC(j);
-		//		Sleep(ISG);
-		//		SHINY_INTRO_COLOUR_GEN();
-		//		printf("Test 1 4\n");
-		//		Sleep(ISG);
-		//		SHINY_INTRO_COLOUR_GEN();
-		//		printf("Test 1 5\n");
-		//		INC(j);
-		//		Sleep(ISG_L);
-		//		if (j < 6) continue;
-		//		else if (j >= 6) SI = TRUE;
-		//		if (SI == TRUE) {
-		//			SI = FALSE;
-		//			j = NI;
-		//			for (; 1;) {
-		//				BB_SHORT();
-		//				SHINY_INTRO_COLOUR_GEN();
-		//				printf("Test 1 1 1\n");
-		//				INC(j);
-		//				Sleep(ISG);
-		//				SHINY_INTRO_COLOUR_GEN();
-		//				printf("Test 1 1 2\n");
-		//				Sleep(ISG);
-		//				SHINY_INTRO_COLOUR_GEN();
-		//				printf("Test 1 1 3\n");
-		//				INC(j);
-		//				Sleep(ISG);
-		//				SHINY_INTRO_COLOUR_GEN();
-		//				printf("Test 1 1 4\n");
-		//				Sleep(ISG);
-		//				SHINY_INTRO_COLOUR_GEN();
-		//				printf("Test 1 1 5\n");
-		//				INC(j);
-		//				Sleep(ISG_L);
-		//				if (j >= 6) SI = TRUE;
-		//				if (SI == TRUE) break;
-		//			}
-		//		}
-		//		break;
-		//	}
-		//}
 		break;
 	}
 }
