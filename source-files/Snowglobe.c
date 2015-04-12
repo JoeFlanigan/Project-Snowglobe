@@ -1,15 +1,13 @@
-#include "MasterHandler.h" // Let's include our headers, nu?
+#include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		Project Name			=> "Project Snowglobe"
- *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
- *		Project Output Language 	=> "English"
- *
- *		Project Description		=> "PJ; Snowglobe is my Sandbox, really it doesn't actually have any use."
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Snowglobe.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//     Project Output Lang  => "English"
+//                            
+//     File Description	    => "PJ; Snowglobe is my lil' Sandbox"
 
 void SNOWGLOBE(void) { 
 	char ov_menu_input = NI, *cck = NULL;
