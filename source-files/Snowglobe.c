@@ -13,8 +13,8 @@ void SNOWGLOBE(void) {
 	char ov_menu_input = NI, *cck = NULL, *ov_uid = NI;
 	bool CHECK = NI;
 
-//	ov_uid = SG_AUTH_SYS(CHECK);
-//	ShinyIntro();
+	ov_uid = SG_AUTH_SYS(CHECK);
+	ShinyIntro();
 
 	do {
 		BOOL_CHECK(ov_uid);
