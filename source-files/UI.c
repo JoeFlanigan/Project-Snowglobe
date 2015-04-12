@@ -1,10 +1,10 @@
 #include "MasterHandler.h"
 
 /*
- *						PJ; SNOWGLOBE -RB
+ *					    PJ; SNOWGLOBE -RB
  *				   	<===|===><==|==><===|===>
  *
- *		File Name				=> UI.c
+ *		File Name			=> UI.c
  *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
  *		File Description		=> N/A
  */
