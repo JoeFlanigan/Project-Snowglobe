@@ -10,7 +10,7 @@
  *								   - A couple of comments, within this source code
  *									 could be in german of course.
  *
- *		Project Description		=> "PJ; Snowglobe is my Sandbox, really it actually has no use."
+ *		Project Description		=> "PJ; Snowglobe is my Sandbox, really it doesn't actually have any use."
  */
 
 void SNOWGLOBE(void) { 
