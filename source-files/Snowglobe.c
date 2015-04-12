@@ -1,14 +1,12 @@
 #include "MasterHandler.h" // Let's include our headers, nu?
 
 /*		
- *						PJ; SNOWGLOBE -RB
+ *					    PJ; SNOWGLOBE -RB
  *				   	<===|===><==|==><===|===>
  *
- *      Project Name			=> "Project Snowglobe"
+ *              Project Name			=> "Project Snowglobe"
  *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
  *		Project Output Language => "English"
- *								   - A couple of comments, within this source code
- *									 could be in german of course.
  *
  *		Project Description		=> "PJ; Snowglobe is my Sandbox, really it doesn't actually have any use."
  */
