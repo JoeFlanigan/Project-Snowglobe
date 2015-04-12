@@ -1,6 +1,15 @@
 #ifndef __fnc_types_H__
 #define __fnc_types_H__
 
+/*
+ *					      PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		    	=> fnc_types.h
+ *		Author  Name	  	=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 // Atm.c
 char ATM(char, bool);
 float ATM_INPUT(bool);
