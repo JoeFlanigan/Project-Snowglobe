@@ -12,7 +12,7 @@
 const static char _get_prg_author[] = "Rebirth aka Joe Flanigan";
 const static char _get_prg_crdate[] = "09/04/2015";
 const static char _get_prjct_name[] = "Project Snowglobe";
-const static char _get_prjct_vers[] = "Version 0.5";
+const static char _get_prjct_vers[] = "Version 0.5.6";
 const static char _get_prg_nspace[] = "--------------------------------------------------";
 
 void BOOL_CHECK(char *ov_uid) {
@@ -34,7 +34,7 @@ void TITLES(char *ov_uid) {
 	BB_SHORT();
 	TIME_DEF(_right_now);
 	printf("	%s made by %s\n", _get_prjct_name, _get_prg_author);
-	printf("	 Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
+	printf("	Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
 	printf("	%s :: Logged in as %s\n", _right_now, ov_uid);
 	printf("	%s\n", _get_prg_nspace);
 }
@@ -45,7 +45,7 @@ void SG_AUTH_SYS_TITLES(void) {
 	BB_SHORT();
 	TIME_DEF(_right_now);
 	printf("	%s made by %s\n", _get_prjct_name, _get_prg_author);
-	printf("	 Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
+	printf("	Created on the %s :: This is %s\n", _get_prg_crdate, _get_prjct_vers);
 	printf("	     %s :: Not logged in\n", _right_now);
 	printf("	%s\n", _get_prg_nspace);
 }

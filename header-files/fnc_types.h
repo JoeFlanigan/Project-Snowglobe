@@ -34,8 +34,8 @@ unsigned int STD_EXIT(char *);
 // Input_Ctrl.c
 void MAIN_MENU_INPUT_CTRL(char, char *);
 bool CALCULATOR_INPUT_ROP_CTRL(char, bool, char *);
-bool CALCULATOR_INPUT_CTRL(unsigned int, bool, char *);
-bool ATM_INPUT_CTRL(float, bool, char *);
+bool CALCULATOR_INPUT_CTRL(unsigned int, bool, char *, int);
+bool ATM_INPUT_CTRL(float, bool, char *, int);
 void MAINTENANCE_CENTER_MENU_INPUT_CTRL(char, char *);
 bool SUB_MENU_REPEAT_CTRL(char, bool, char *);
 void CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(char, char *);
@@ -56,16 +56,19 @@ void MISC_ERROR(const char *, const char *);
 char CALCULATOR_INPUT_ROP_LOWER(char);
 // MiscTools.c
 char CELSIUS_FAHRENHEIT_MISCTOOL(char, bool, char *);
+char multiplication_table(char *, char);
 // Operation.c
 char MAIN_OPERATION(char, bool, char *);
 float CALCULATOR_OPERATION(unsigned int, char, unsigned int, float);
 int *ATM_OPERATION(float);
 char MAINTENANCE_CENTER_OPERATION(char, char *);
-void SHINY_INTRO_COLOUR_GEN(void);
+char MISCTOOLS_OPERATION(char, char *, bool);
+void COLOUR_GEN(void);
 // UI.c
 char MAIN_MENU(char, char *);
 char SUB_MENU_REPEAT(char, bool, char *);
 char MAINTENANCE_CENTER_MENU(char, char *);
 char CELSIUS_FAHRENHEIT_MISCTOOL_MENU(char, char *);
+char MISCTOOLS_MENU(char, bool, char *);
 
 #endif

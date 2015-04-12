@@ -16,11 +16,12 @@ void ShinyIntro(void) {
 	for (; 1;) {
 		BB_SHORT();
 		INC(j);
-		SHINY_INTRO_COLOUR_GEN();
+		COLOUR_GEN();
 		printf("	This  tool  was made by Joe Flanigan aka  Rebirth\n");
 		printf("	<===============================================>\n");
 		Sleep(ISG);													 
-		SHINY_INTRO_COLOUR_GEN();									 
+		COLOUR_GEN();
+#pragma region intro_1
 		printf("	,------.                ,--.               ,--.   ");
 		printf("\n");
 		printf("	|  .--. ',--.--. ,---.  `--' ,---.  ,---.,-'  '-. ");
@@ -33,8 +34,10 @@ void ShinyIntro(void) {
 		printf("\n");
 		printf("	                      '---'                       ");
 		printf("\n");
+#pragma endregion intro_1
 		Sleep(ISG);
-		SHINY_INTRO_COLOUR_GEN();
+		COLOUR_GEN();
+#pragma region intro_2
 		printf("	 ,---.                                    ");
 		printf("\n");
 		printf("	'   .-' ,--,--,  ,---. ,--.   ,--.,-----. ");
@@ -45,9 +48,11 @@ void ShinyIntro(void) {
 		printf("\n");
 		printf("	`-----' `--''--' `---' '--'   '--'        ");
 		printf("\n");
+#pragma endregion intro_2
 		INC(j);
 		Sleep(ISG);
-		SHINY_INTRO_COLOUR_GEN();
+		COLOUR_GEN();
+#pragma region intro_3
 		printf("			       ,--.       ,--.           ");
 		printf("\n");
 		printf("			 ,---. |  | ,---. |  |-.  ,---.  ");
@@ -60,6 +65,7 @@ void ShinyIntro(void) {
 		printf("\n");
 		printf("			`---'                            ");
 		printf("\n");
+#pragma endregion intro_3
 		Sleep(ISG_L);
 		INC(j);
 		if (j < 6) continue;

@@ -39,9 +39,9 @@ float ATM_INPUT(bool CHECK, char *ov_uid) {
 		printf("\n	Input a number between 0 and 759000 => ");
 		r = scanf("%f", &atm_input);
 		fflush(stdin);
-		CHECK = ATM_INPUT_CTRL(atm_input, CHECK, ov_uid);
+		CHECK = ATM_INPUT_CTRL(atm_input, CHECK, ov_uid, r);
 	} while ((atm_input > ALM || atm_input < ALN)
-		|| (CHECK != FALSE));
+		|| (CHECK != FALSE || r != 1));
 
 	return (atm_input);
 }

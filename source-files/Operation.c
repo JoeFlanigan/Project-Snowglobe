@@ -15,6 +15,7 @@ char MAIN_OPERATION(char ov_menu_input, bool CHECK, char *ov_uid) {
 	case 'e': STD_EXIT(ov_uid); break;
 	case 'c': ov_menu_input = CALCULATOR(ov_menu_input, CHECK, ov_uid); break;
 	case 'm': ov_menu_input = MAINTENANCE_CENTER(ov_menu_input, CHECK, ov_uid); break;
+	case 't': ov_menu_input = MISCTOOLS_MENU(ov_menu_input, CHECK, ov_uid); break;
 	}
 
 	return (ov_menu_input);
@@ -113,9 +114,20 @@ char MAINTENANCE_CENTER_OPERATION(char ov_menu_input, char *ov_uid) {
 	return (ov_menu_input);
 }
 
-void SHINY_INTRO_COLOUR_GEN(void) {
+char MISCTOOLS_OPERATION(char ov_menu_input, char *ov_uid, bool CHECK) {
+	switch (ov_menu_input) {
+	case 'e': STD_EXIT(ov_uid); break;
+	case 'p': ov_menu_input = CELSIUS_FAHRENHEIT_MISCTOOL(ov_menu_input, CHECK, ov_uid); break;
+	case 'm': ov_menu_input = multiplication_table(ov_uid, ov_menu_input); break;
+	}
+
+	return (ov_menu_input);
+}
+
+void COLOUR_GEN(void) {
 	unsigned int colour_c;
 	colour_c = rand() % 15;
+
 	switch (colour_c) {
 	case 1: system("color 1"); break;
 	case 2: system("color 2"); break;

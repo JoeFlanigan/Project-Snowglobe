@@ -20,6 +20,7 @@ char MAIN_MENU(char ov_menu_input, char *ov_uid) {
 		printf("	     Option <=> A <=>	          ATM machine\n");
 		printf("	     Option <=> C <=>	           Calculator\n");
 		printf("	     Option <=> M <=>	   Maintenance Center\n");
+		printf("	     Option <=> T <=>	    MiscTools SubMenu\n");
 		printf("	     %s\n", gl_get_prjct_menuspace);
 		printf("	     Input  ==> ");
 		ov_menu_input = getche();
@@ -27,7 +28,8 @@ char MAIN_MENU(char ov_menu_input, char *ov_uid) {
 		ov_menu_input = MIL(ov_menu_input);
 		MAIN_MENU_INPUT_CTRL(ov_menu_input, ov_uid);
 	} while ((ov_menu_input != 'e' && ov_menu_input != 'c')
-		&& (ov_menu_input != 'a' && ov_menu_input != 'm'));
+		&& (ov_menu_input != 'a' && ov_menu_input != 'm')
+		&& (ov_menu_input != 't'));
 
 	return (ov_menu_input);
 }
@@ -92,6 +94,29 @@ char CELSIUS_FAHRENHEIT_MISCTOOL_MENU(char ov_menu_input, char *ov_uid) {
 		CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(ov_menu_input, ov_uid);
 	} while ((ov_menu_input != 'e' && ov_menu_input != 't')
 		&& (ov_menu_input != 'c' && ov_menu_input != 'f'));
+
+	return (ov_menu_input);
+}
+
+char MISCTOOLS_MENU(char ov_menu_input, bool CHECK, char *ov_uid) {
+	do {
+		TITLES(ov_uid);
+		printf("	This is the misctools menu. Below you will find\n");
+		printf("	some options/tools that you can choose from\n\n");
+		printf("	     %s\n", gl_get_prjct_menuspace);
+		printf("	     Option <=> E <=>	        Exit the tool\n");
+		printf("	     Option <=> T <=>	  Return to Main Menu\n");
+		printf("	     Option <=> P <=>	   Celsius/Fahrenheit\n");
+		printf("	     Option <=> M <=>	 Multiplication table\n");
+		printf("	     %s\n", gl_get_prjct_menuspace);
+		printf("	     Input  ==> ");
+		ov_menu_input = getche();
+		fflush(stdin);
+		ov_menu_input = MIL(ov_menu_input);
+		MISCTOOLS_MENU_CTRL(ov_menu_input, ov_uid);
+	} while ((ov_menu_input != 'e' && ov_menu_input != 't')
+		&& (ov_menu_input != 'p' && ov_menu_input != 'm'));
+	ov_menu_input = MISCTOOLS_OPERATION(ov_menu_input, ov_uid, CHECK);
 
 	return (ov_menu_input);
 }

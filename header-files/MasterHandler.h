@@ -15,14 +15,14 @@
 
 // Preprocessor directives
 
-#define MISC_REGION(x) PPST(x)
+#pragma region MISC
 	#if defined(WIN32) && !defined(UNIX)
 		#include <Windows.h>
-		#pragma message ( " WIN32 API, confirmed. Code will be probably optimized during compilation process based on WIN32 specifications. " )
+		#pragma message ( " WIN32 API, confirmed. Code will probably be optimized during the compilation process based on WIN32 specifications. " )
 	#elif defined(UNIX) && !defined(WIN32)
 		#error Error: UNIX OS is not supported (yet). Contact the author of this tool for support.
 		// #include <unistd.h>
-		// #pragma message ( " UNIX OS, confirmed. Code will be probably optimized during compilation process based on UNIX specifications. " )
+		// #pragma message ( " UNIX OS, confirmed. Code will probably be optimized during the compilation process based on UNIX specifications. " )
 	#else
 		#error Error: both cannot be defined or undefined at the same time (UNIX & WIN32)
 	#endif
@@ -39,32 +39,38 @@
 	#define NULL_INITIALIZE (0)
 	#define INTRO_SNOWGLOBE (1250)
 	#define INTRO_SNOWGLOBE_LONG (2000)
+#pragma endregion MISC
 
-#define ATM_REGION(x) PPST(x)
+#pragma region ATM
 	#define ATM_LIMIT_MIN (0)				
 	#define ATM_LIMIT_MAX (759000)			
 	#define ATM_OUTPUT_MIN_SG (0)
 	#define ATM_OUTPUT_MAX_SG (2)
 	#define ATM_OUTPUT_MAX_PL (1)
+#pragma endregion ATM
 
-#define CALC_REGION(x) PPST(x)
+#pragma region CALC
 	#define PI (3.14159265359)             // Uh, PI. What else did you expect de moi?
 	#define CALC_SQUARE(x) ((x)*(x))       // still using pow(); and u got this here... shame on you Joey... :3
 	#define CALC_LIMIT_MIN (0)					
-	#define CALC_LIMIT_MAX (2500)		
+	#define CALC_LIMIT_MAX (2500)	
+#pragma endregion CALC
 
-#define MAINTENANCE_CENTER_REGION(x) PPST(x)
+#pragma region MAINTENANCE
 	#define MAINTENANCE_DONT_OVERCLOCK (750)
+#pragma endregion MAINTENANCE
 
-#define MISCTOOLS_REGION(x) PPST(x)
+#pragma region MISCTOOLS
 	#define CELSIUS_TO_FAHRENHEIT(x) ((x) * 1.8 + 32 )
 	#define FAHRENHEIT_TO_CELSIUS(x) ((x - 32) / 1.8)
 	#define CELSIUS_MINIMUM_INPUT (0)
 	#define CELSIUS_MAXIMUM_INPUT (299)
 	#define FAHRENHEIT_MINIMUM_INPUT (0)
 	#define FAHRENHEIT_MAXIMUM_INPUT (759)
+	#define MULTIPLICATION_TABLE (499)
+#pragma endregion MISCTOOLS
 
-#define SHORTCUTS_REGION(x) PPST(x)
+#pragma region SHORTCUTS
 	#define ALN (ATM_LIMIT_MIN)
 	#define ALM (ATM_LIMIT_MAX)
 	#define AOSG (ATM_OUTPUT_MIN_SG)
@@ -87,7 +93,9 @@
 						#define ISG (INTRO_SNOWGLOBE)
 						#define ISG_L (INTRO_SNOWGLOBE_LONG)
 							#define MDO (MAINTENANCE_DONT_OVERCLOCK)
+							#define MT (MULTIPLICATION_TABLE)
 								#define NI (NULL_INITIALIZE)
+#pragma endregion SHORTCUTS
 
 // Including Headers from the C-library
 

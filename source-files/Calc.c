@@ -34,20 +34,16 @@ char CALCULATOR(char ov_menu_input, bool CHECK, char *ov_uid) {
 
 unsigned int CALCULATOR_INPUT(bool CHECK, char *ov_uid) {
 	unsigned int c_input;
-#pragma warning(suppress: 6031)
-	// int r; // I wrote this line, so that the VS compiler shuts up... picky lil' girly (>_<)
-	// found a fix for the above, lel #rekt
-	// No wait, this is not an actual fix, welp
+	int r;
 
 	do {
 		CHECK = FALSE;
 		printf("\n	Input a number between 0 and 2500 => ");
-		#pragma warning(suppress: 6031)
-		scanf("%u", &c_input);                                       // r = scanf(blabla) fix later ...
+		r = scanf("%u", &c_input);     
 		fflush(stdin);
-		CHECK = CALCULATOR_INPUT_CTRL(c_input, CHECK, ov_uid);
+		CHECK = CALCULATOR_INPUT_CTRL(c_input, CHECK, ov_uid, r);
 	} while ((c_input > CLM || c_input < CLN)
-		|| (CHECK != FALSE));
+		|| (CHECK != FALSE || r != 1));
 
 	return (c_input);
 }
