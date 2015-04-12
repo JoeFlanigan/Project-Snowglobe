@@ -1,13 +1,15 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> Input_Ctrl.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Input_Ctrl.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => Those functions below, check if the
+//                             input from the caller matches what
+//                             we want to have. Otherwise output an
+//                             error message and go back a step
 
 void MAIN_MENU_INPUT_CTRL(char ov_menu_input) {
 	if ((ov_menu_input != 'e' && ov_menu_input != 'c')
