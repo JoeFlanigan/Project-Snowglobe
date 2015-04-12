@@ -40,10 +40,6 @@
 	#define INTRO_SNOWGLOBE (1250)
 	#define INTRO_SNOWGLOBE_LONG (2000)
 
-#define AUTH_REGION(x) PPST(x)
-	#define AUTH_ADMIN_ID ("JoeFlanigan")
-	#define AUTH_ADMIN_PW ("cakeIZtasty")
-
 #define ATM_REGION(x) PPST(x)
 	#define ATM_LIMIT_MIN (0)				
 	#define ATM_LIMIT_MAX (759000)			
@@ -69,8 +65,6 @@
 	#define FAHRENHEIT_MAXIMUM_INPUT (759)
 
 #define SHORTCUTS_REGION(x) PPST(x)
-	#define AAI (AUTH_ADMIN_ID)
-	#define AAP (AUTH_ADMIN_PW)
 	#define ALN (ATM_LIMIT_MIN)
 	#define ALM (ATM_LIMIT_MAX)
 	#define AOSG (ATM_OUTPUT_MIN_SG)
