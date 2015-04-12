@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> MiscTools.c.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK) {
 	float fahrenheit, celsius;
 
