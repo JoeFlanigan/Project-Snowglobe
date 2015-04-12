@@ -1,13 +1,13 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> Calc.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Calc.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => This file will assemble all functions
+//                             for the calculator we will need...
 
 char CALCULATOR(char ov_menu_input, bool CHECK) { 
 	unsigned int _no1, _no2;				
@@ -16,17 +16,17 @@ char CALCULATOR(char ov_menu_input, bool CHECK) {
 
 	do {
 		TITLES();
-		_no1 = CALCULATOR_INPUT(CHECK);									// => Input of the first number
-		_rechenop = CALCULATOR_INPUT_ROP(CHECK);						// => Input of the arithmetic operation(?)
-		_no2 = CALCULATOR_INPUT(CHECK);									// => Input of number 2
-		if (_no2 == 0 && _rechenop == '/') {							// => Some checks, to see if we can proceed
+		_no1 = CALCULATOR_INPUT(CHECK);
+		_rechenop = CALCULATOR_INPUT_ROP(CHECK);
+		_no2 = CALCULATOR_INPUT(CHECK);
+		if (_no2 == 0 && _rechenop == '/') {
 			BB_ERROR();												
 			continue;													
 		}
-		_erg = CALCULATOR_OPERATION(_no1, _rechenop, _no2, _erg);		// => Processing
-		CALCULATOR_OUTPUT(_no1, _rechenop, _no2, _erg);					// => Output
-		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);	// => Call the function, that will show us a menu to repeat or leave
-		assert(ov_menu_input != NULL);									// If != NULL _call abort()
+		_erg = CALCULATOR_OPERATION(_no1, _rechenop, _no2, _erg);
+		CALCULATOR_OUTPUT(_no1, _rechenop, _no2, _erg);
+		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);
+		assert(ov_menu_input != NULL);
 	} while (ov_menu_input == 'r' || _no2 == NULL && _rechenop == '/');
 
 	return (ov_menu_input);
@@ -34,7 +34,7 @@ char CALCULATOR(char ov_menu_input, bool CHECK) {
 																	
 unsigned int CALCULATOR_INPUT(bool CHECK) {
 	unsigned int c_input;
-	int r;	// useless, stuff. I wrote this line, so that the VS compiler shuts up... picky lil' girly (>_<)
+	int r; // I wrote this line, so that the VS compiler shuts up... picky lil' girly (>_<)
 
 	do {
 		CHECK = FALSE;
