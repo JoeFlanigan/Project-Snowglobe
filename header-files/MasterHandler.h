@@ -95,16 +95,16 @@
 
 // Including Headers from the C-library
 
-#include <assert.h>								// assert() to perform runtime checks O:
-#include <stdlib.h>								// C Standardlibrary, includes ... well, it's the standard library
-#include <stdbool.h>							// bool  in C! Yay! (many hugz) TRUE, FALSE!! :D come at me bro', missed ya'
-#include <math.h>								// math.h for functions like pow(x1, x2); we will need for our Calculator. /* Calc.c */
-#include <conio.h>                              // conio.h contains useful functions, we will use, like "getche();" as advanced input method(s).
-#include <stdio.h>								// stdio.h is the "Standard-Input-Output" library we will use. /* contains : scanf(); as well printf(); function(s) */
+#include <assert.h>     // assert() to perform runtime checks O:
+#include <stdlib.h>     // C Standardlibrary, includes ... well, it's the standard library
+#include <stdbool.h>    // bool  in C! Yay! (many hugz) TRUE, FALSE!! :D come at me bro', missed ya'
+#include <math.h>       // math.h for functions like pow(x1, x2); we will need for our Calculator. /* Calc.c */
+#include <conio.h>      // conio.h contains useful functions, we will use, like "getche();" as advanced input method(s).
+#include <stdio.h>      // stdio.h is the "Standard-Input-Output" library we will use. /* contains : scanf(); as well printf(); function(s) */
 
 // Including our own Header(s)
 
-#include "fnc_types.h"							// fnc_types.h is the header we've wrote for this project to store our function prototypes somewhere and make them accessible all over the tool.
-#include "snowglobe_sdk.h"						// snowglobe_sdk.h is most likely the same as above. /* SDK = "Software Development Kit" */
+#include "fnc_types.h"          // fnc_types.h is the header we've wrote for this project to store our function prototypes somewhere and make them accessible all over the tool.
+#include "snowglobe_sdk.h"      // snowglobe_sdk.h is most likely the same as above. /* SDK = "Software Development Kit" */
 
 #endif
