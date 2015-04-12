@@ -1,13 +1,14 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> Atm.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Atm.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => This is our main file, where we will
+//                             assemble all operations used for the
+//                             ATM machine
 
 char ATM(char ov_menu_input, bool CHECK) {
 	int *_atm_opa;
@@ -15,13 +16,13 @@ char ATM(char ov_menu_input, bool CHECK) {
 
 	do {
 		TITLES();
-		_atm_balance = ATM_INPUT(CHECK);		// Input
-		if (_atm_balance < 0.05f) {				// You cannot get paid when your balance is under 0.01 $, right? :3
+		_atm_balance = ATM_INPUT(CHECK);
+		if (_atm_balance < 0.05f) {
 			BB_ERROR();
 			continue;
 		}
-		_atm_opa = ATM_OPERATION(_atm_balance);	// Processing
-		ATM_OUTPUT(_atm_opa, _atm_balance);		// Output
+		_atm_opa = ATM_OPERATION(_atm_balance);
+		ATM_OUTPUT(_atm_opa, _atm_balance);
 		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);
 		assert(ov_menu_input != NULL);
 	} while (ov_menu_input == 'r' || _atm_balance < 0.05f);
