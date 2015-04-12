@@ -75,5 +75,6 @@ void CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(char ov_menu_input, char *ov_uid) {
 
 void MISCTOOLS_MENU_CTRL(char ov_menu_input, char *ov_uid) {
 	if ((ov_menu_input != 'e' && ov_menu_input != 't')
-		&& (ov_menu_input != 'p' && ov_menu_input != 'm')) BB_ERROR(ov_uid);
+		&& (ov_menu_input != 'p' && ov_menu_input != 'm')
+		&& (ov_menu_input != 'r')) BB_ERROR(ov_uid);
 }

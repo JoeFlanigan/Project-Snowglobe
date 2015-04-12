@@ -56,7 +56,8 @@ void MISC_ERROR(const char *, const char *);
 char CALCULATOR_INPUT_ROP_LOWER(char);
 // MiscTools.c
 char CELSIUS_FAHRENHEIT_MISCTOOL(char, bool, char *);
-char multiplication_table(char *, char);
+char MULTIPLICATION_TABLE_M(char *, char);
+char REPEAT_MY_STRING(char, char *);
 // Operation.c
 char MAIN_OPERATION(char, bool, char *);
 float CALCULATOR_OPERATION(unsigned int, char, unsigned int, float);

@@ -58,7 +58,7 @@ char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK, char *ov_uid) {
 	return (ov_menu_input);
 }
 
-char multiplication_table(char *ov_uid, char ov_menu_input) {
+char MULTIPLICATION_TABLE_M(char *ov_uid, char ov_menu_input) {
 	int i, j, k = 2;
 	char _mt;
 	bool _abort = FALSE;
@@ -87,16 +87,20 @@ char multiplication_table(char *ov_uid, char ov_menu_input) {
 	return (ov_menu_input);
 }
 
-/*
-void REPEAT_IT_BABE(void) {
-char _sentence[100];
+char REPEAT_MY_STRING(char ov_menu_input, char *ov_uid) {
+	char _sentence[101];
 
-TITLES();
-printf("	     Enter a whole sentence => ");
-scanf("%10[^\t]s", _sentence);					// Will accept anything entered, stop input with "tab+enter" after sentence is written
+	do {
+		TITLES(ov_uid);
+		printf("\n	Enter a sentence => ");
+		// scanf("%[^\t]s", _sentence); // %129[^\t]s , s = string, 129 = maximum accepted chars, [^\t] = accept spaces // Option I.
+		gets(_sentence); // Option II.
+		printf("\n	So you... %s ...right? :3\n", _sentence);
+		printf("\n	Press    <=> T <=> to get back to the main menu\n");
+		printf("	Or press <=> R <=> to repeat this sub-tool\n");
+		ov_menu_input = getche();
+		ov_menu_input = MIL(ov_menu_input);
+	} while (ov_menu_input == 'r');
 
-printf("Accepted => %s", _sentence);
-
-system("pause");
+	return (ov_menu_input);
 }
-*/
