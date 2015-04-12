@@ -1,20 +1,20 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> MaintenanceCenter.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Intro.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => Giving the user couple of windows repair
+//                             options, such as "checkdisk"
 
 char MAINTENANCE_CENTER(char ov_menu_input, bool CHECK) {
 
 	do {
-		ov_menu_input = MAINTENANCE_CENTER_MENU(ov_menu_input);			// Input, which operation should we start off with?
+		ov_menu_input = MAINTENANCE_CENTER_MENU(ov_menu_input);
 		if (ov_menu_input == 't') continue;
-		ov_menu_input = MAINTENANCE_CENTER_OPERATION(ov_menu_input);	// Processing + Output
+		ov_menu_input = MAINTENANCE_CENTER_OPERATION(ov_menu_input);
 		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK);
 		assert(ov_menu_input != NULL);
 	} while (ov_menu_input == 'r' && ov_menu_input != 't');
@@ -55,7 +55,7 @@ void CONNECTION_REPAIR(void) {
 		Sleep(MDO);
 		r[l] = system("ipconfig /registerdns");
 		if (r[l] != NULL) INC(k);
-		if (k == NULL) BB_SUCCESS();							// Everything went smoothy? Sweet.
+		if (k == NULL) BB_SUCCESS(); // Everything went smoothy? Sweet.
 		else if (k != NULL) BB_ERROR();
 	} while (k != NULL);
 }
@@ -80,7 +80,7 @@ void DISK_REPAIR_OPERATION(void) {
 		k = 0, l = 0;
 		TITLES();
 		INC(l);
-		system("chkdsk c: /f /r");			// Repair process will take place in next system restart, should we force to restart instead O: ?
+		system("chkdsk c: /f /r");
 		if (r[l] != NULL) INC(k);
 		else BB_SUCCESS();
 	} while (k != NULL);
