@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> BlackBox.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 void BB_SHORT(void) {
 	system("color F");			/* Whenever we're calling our "system();" function, we are using the windows console to execute a command. 
 								 * In this case, we're setting the consoles colour background to "F = White".
