@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> Calc.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 char CALCULATOR(char ov_menu_input, bool CHECK) { 
 	unsigned int _no1, _no2;				
 	char _rechenop;
