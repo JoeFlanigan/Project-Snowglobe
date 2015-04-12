@@ -1,13 +1,12 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name			=> UI.c
- *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
- *		File Description		=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => UI.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => Interface(s)/Menu(s) for PJ; Snowglobe
 
 const static char gl_get_prjct_menuspace[] = "----------------------------------------";
 
