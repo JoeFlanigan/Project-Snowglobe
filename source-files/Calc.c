@@ -7,7 +7,7 @@
 //     Author Name          => "Rebirth" aka "Joe Flanigan"
 //                            
 //     File Description	    => This file will assemble all functions
-//                             for the calculator we will need...
+//                             we will need for the calculator
 
 char CALCULATOR(char ov_menu_input, bool CHECK) { 
 	unsigned int _no1, _no2;				
