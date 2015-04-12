@@ -1,15 +1,12 @@
 #include "MasterHandler.h"
 
-/* https://youtu.be/NbdHLF2EyZE?t=34s 
- *	all my variables all
- *			my
- *	  functions all my
- *	  values while am
- *	   operatin' all my
- *      output all my...
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
  *
- * ... I ran out of words ... #define false true
- * ... problem solved, gg wp
+ *		File Name		=> Atm.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
  */
 
 char ATM(char ov_menu_input, bool CHECK) {
