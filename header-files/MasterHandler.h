@@ -1,14 +1,15 @@
 #ifndef __MasterHandler_H__
 #define __MasterHandler_H__
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> MasterHandler.h
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => MasterHandler.h
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => This file is giving orders to the preprocessor
+//                             and is including other relevant headers during
+//                             the compilation process...
 
 #pragma warning(disable:4996 4047 24 28 13)
 
@@ -30,22 +31,14 @@
 	#define PPST(x) #x									
 		#define TO_STRING(x) PPST(x)					
 			#define ERR __FILE__ ":" TO_STRING(__LINE__)
-		#define EXIT (2000)						
-			#define AU (EXIT)
+	#define EXIT (2000)						
 	#define INCREMENT(x) (x++) 
-		#define INC(x) (INCREMENT(x))
 	#define DECREMENT(x) (x--)
-		#define DEC(x) (DECREMENT(x))
-	#define BLACKBOX (2500)											// Outdated V0.2
-		#define BB (BLACKBOX)										
-	#define BBERROR (4250)											// Outdated V0.2
-		#define BE (BBERROR)										// Outdated V0.2
+	#define BLACKBOX (2500)									
+	#define BBERROR (4250)
 	#define NULL_INITIALIZE (0)
-		#define NI (NULL_INITIALIZE)
 	#define INTRO_SNOWGLOBE (1250)
-		#define ISG (INTRO_SNOWGLOBE)
 	#define INTRO_SNOWGLOBE_LONG (2000)
-		#define ISG_L (INTRO_SNOWGLOBE_LONG)
 
 #define AUTH_REGION(x) PPST(x)
 //	#define AUTH_ADMIN_ID (JoeFlanigan:ID001)
@@ -53,42 +46,52 @@
 
 #define ATM_REGION(x) PPST(x)
 	#define ATM_LIMIT_MIN (0)				
-		#define ALN (ATM_LIMIT_MIN)
 	#define ATM_LIMIT_MAX (759000)			
-		#define ALM (ATM_LIMIT_MAX)
 	#define ATM_OUTPUT_MIN_SG (0)
-		#define AOSG (ATM_OUTPUT_MIN_SG)
 	#define ATM_OUTPUT_MAX_SG (2)
-		#define AOMSG (ATM_OUTPUT_MAX_SG)
 	#define ATM_OUTPUT_MAX_PL (1)
-		#define APL (ATM_OUTPUT_MAX_PL)
 
 #define CALC_REGION(x) PPST(x)
-	#define PI (3.14159265359)					// Uh, PI. What else did you expect de moi?
-	#define CALC_SQUARE(x) ((x)*(x))			// The proper way to square..., yeah... still using pow(); shame on you Joey... :3
-		#define CS (CALC_SQUARE)
+	#define PI (3.14159265359)             // Uh, PI. What else did you expect de moi?
+	#define CALC_SQUARE(x) ((x)*(x))       // still using pow(); and u got this here... shame on you Joey... :3
 	#define CALC_LIMIT_MIN (0)					
-		#define CLN (CALC_LIMIT_MIN)
 	#define CALC_LIMIT_MAX (2500)		
-		#define CLM (CALC_LIMIT_MAX)
 
 #define MAINTENANCE_CENTER_REGION(x) PPST(x)
 	#define MAINTENANCE_DONT_OVERCLOCK (750)
-		#define MDO (MAINTENANCE_DONT_OVERCLOCK)
 
 #define MISCTOOLS_REGION(x) PPST(x)
 	#define CELSIUS_TO_FAHRENHEIT(x) ((x) * 1.8 + 32 )
-		#define CTF(x) (CELSIUS_TO_FAHRENHEIT(x))
 	#define FAHRENHEIT_TO_CELSIUS(x) ((x - 32) / 1.8)
-		#define FTC(x) (FAHRENHEIT_TO_CELSIUS(x))
 	#define CELSIUS_MINIMUM_INPUT (0)
-		#define CMI (CELSIUS_MINIMUM_INPUT)
 	#define CELSIUS_MAXIMUM_INPUT (299)
-		#define CMXI (CELSIUS_MAXIMUM_INPUT)
 	#define FAHRENHEIT_MINIMUM_INPUT (0)
-		#define FMI (FAHRENHEIT_MINIMUM_INPUT)
 	#define FAHRENHEIT_MAXIMUM_INPUT (759)
-		#define FMXI (FAHRENHEIT_MAXIMUM_INPUT)
+
+#define SHORTCUTS_REGION(x) PPST(x)
+	#define ALN (ATM_LIMIT_MIN)
+	#define ALM (ATM_LIMIT_MAX)
+	#define AOSG (ATM_OUTPUT_MIN_SG)
+	#define AOMSG (ATM_OUTPUT_MAX_SG)
+	#define APL (ATM_OUTPUT_MAX_PL)
+	#define AU (EXIT)
+		#define BB (BLACKBOX)
+		#define BE (BBERROR)
+			#define CLN (CALC_LIMIT_MIN)
+			#define CLM (CALC_LIMIT_MAX)
+			#define CMI (CELSIUS_MINIMUM_INPUT)
+			#define CMXI (CELSIUS_MAXIMUM_INPUT)
+			#define CS (CALC_SQUARE)
+			#define CTF(x) (CELSIUS_TO_FAHRENHEIT(x))
+				#define DEC(x) (DECREMENT(x))
+					#define FMI (FAHRENHEIT_MINIMUM_INPUT)
+					#define FMXI (FAHRENHEIT_MAXIMUM_INPUT)
+					#define FTC(x) (FAHRENHEIT_TO_CELSIUS(x))
+						#define INC(x) (INCREMENT(x))
+						#define ISG (INTRO_SNOWGLOBE)
+						#define ISG_L (INTRO_SNOWGLOBE_LONG)
+							#define MDO (MAINTENANCE_DONT_OVERCLOCK)
+								#define NI (NULL_INITIALIZE)
 
 // Including Headers from the C-library
 
