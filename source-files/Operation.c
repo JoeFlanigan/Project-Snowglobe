@@ -1,13 +1,13 @@
 #include "MasterHandler.h"
 
-/*
- *					    PJ; SNOWGLOBE -RB
- *				   	<===|===><==|==><===|===>
- *
- *		File Name		=> Operation.c
- *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
- *		File Description	=> N/A
- */
+//                       PJ; SNOWGLOBE -RB
+//                   <===|===><==|==><===|===>
+//                            
+//     File Name            => Operation.c
+//     Author Name          => "Rebirth" aka "Joe Flanigan"
+//                            
+//     File Description	    => The main operation(s) of this tool
+//                             also from ATM.c/CALC.c on and on..
 
 char MAIN_OPERATION(char ov_menu_input, bool CHECK) {
 	switch (ov_menu_input) {
@@ -34,7 +34,7 @@ float CALCULATOR_OPERATION(unsigned int _no1, char _rechenop, unsigned int _no2,
 }
 
 int *ATM_OPERATION(float _atm_balance) {
-	static int atm_opa[16] = { NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI }; // opa = operation_array, in german: opa = grandpa lel
+	static int atm_opa[16] = { NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI };
 
 	while (_atm_balance >= 0.01f) {
 		if (_atm_balance >= 500.00) {
