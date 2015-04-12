@@ -1,10 +1,10 @@
 #include "MasterHandler.h" // Let's include our headers, nu?
 
-/*		
+/*
  *					    PJ; SNOWGLOBE -RB
  *				   	<===|===><==|==><===|===>
  *
- *              Project Name			=> "Project Snowglobe"
+ *		Project Name			=> "Project Snowglobe"
  *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
  *		Project Output Language => "English"
  *
