@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> Input_Ctrl.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 void MAIN_MENU_INPUT_CTRL(char ov_menu_input) {
 	if ((ov_menu_input != 'e' && ov_menu_input != 'c')
 		&& (ov_menu_input != 'a' && ov_menu_input != 'm')) BB_ERROR();
