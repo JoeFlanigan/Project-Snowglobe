@@ -4,7 +4,7 @@
  *					    PJ; SNOWGLOBE -RB
  *				   	<===|===><==|==><===|===>
  *
- *		File Name		=> Misc.c.c
+ *		File Name		=> Misc.c
  *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
  *		File Description	=> N/A
  */
