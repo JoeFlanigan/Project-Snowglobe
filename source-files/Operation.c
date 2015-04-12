@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> Operation.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 char MAIN_OPERATION(char ov_menu_input, bool CHECK) {
 	switch (ov_menu_input) {
 	case 'a': ov_menu_input = ATM(ov_menu_input, CHECK); break;
