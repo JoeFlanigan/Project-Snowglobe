@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> Misc.c.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 void BOOL_CHECK(void) {
 	char zw_er;
 
