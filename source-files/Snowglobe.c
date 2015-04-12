@@ -6,7 +6,7 @@
  *
  *		Project Name			=> "Project Snowglobe"
  *		Author  Name			=> "Rebirth" aka "Joe Flanigan"
- *		Project Output Language => "English"
+ *		Project Output Language 	=> "English"
  *
  *		Project Description		=> "PJ; Snowglobe is my Sandbox, really it doesn't actually have any use."
  */
