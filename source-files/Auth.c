@@ -1,5 +1,14 @@
 #include "MasterHandler.h"
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> Auth.c
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 void SG_AUTH_SYS(void) {
 	// Soon(TM)
 }
