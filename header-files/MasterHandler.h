@@ -1,6 +1,15 @@
 #ifndef __MasterHandler_H__
 #define __MasterHandler_H__
 
+/*
+ *					    PJ; SNOWGLOBE -RB
+ *				   	<===|===><==|==><===|===>
+ *
+ *		File Name		=> MasterHandler.h
+ *		Author  Name		=> "Rebirth" aka "Joe Flanigan"
+ *		File Description	=> N/A
+ */
+
 #pragma warning(disable:4996 4047 24 28 13)
 
 // Preprocessor directives
