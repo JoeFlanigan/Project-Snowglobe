@@ -42,8 +42,9 @@ char *SG_AUTH_SYS_UID_PROCESSING(void) {
 		uid_ch = getch();
 		if (uid_ch == 13) break;
 		if (uid_ch == 8) {
-			putchar("\b \b");
+			putchar("\b");
 			DEC(j);
+			putchar("\b");
 			continue;
 		}
 		else {

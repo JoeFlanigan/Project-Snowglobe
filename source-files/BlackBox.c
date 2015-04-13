@@ -8,7 +8,7 @@
 //                            
 //     File Description	    => Well, BlackBox will set our
 //                             console colour/size etc, back to default
-//                             and clear the output whenever we call it
+//                             and clear the output whenever we call for it
 
 void BB_SHORT(void) {
 	system("color F");
@@ -42,8 +42,6 @@ void BB_ERROR(char *ov_uid) {
 }
 
 void BB_SUCCESS(char *ov_uid) {
-	char zw_er;
-
 	TITLES(ov_uid);
 	system("color 2");
 	printf("	The operation was successfully executed.\n");

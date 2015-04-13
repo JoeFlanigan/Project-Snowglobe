@@ -38,6 +38,7 @@ char MISCTOOLS_OPERATION(char ov_menu_input, char *ov_uid, bool CHECK) {
 	case 'p': ov_menu_input = CELSIUS_FAHRENHEIT_MISCTOOL(ov_menu_input, CHECK, ov_uid); break;
 	case 'm': ov_menu_input = MULTIPLICATION_TABLE_M(ov_uid, ov_menu_input); break;
 	case 'r': ov_menu_input = REPEAT_MY_STRING(ov_menu_input, ov_uid); break;
+	case 'a': ov_menu_input = MARK_AVERAGE_SUM(ov_menu_input, ov_uid); break;
 	}
 
 	return (ov_menu_input);

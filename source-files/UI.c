@@ -109,6 +109,7 @@ char MISCTOOLS_MENU(char ov_menu_input, bool CHECK, char *ov_uid) {
 		printf("	     Option <=> P <=>	   Celsius/Fahrenheit\n");
 		printf("	     Option <=> M <=>	 Multiplication table\n");
 		printf("	     Option <=> R <=>	     Repeat my String\n");
+		printf("	     Option <=> A <=>	 Mark Average and Sum\n");
 		printf("	     %s\n", gl_get_prjct_menuspace);
 		printf("	     Input  ==> ");
 		ov_menu_input = getche();
@@ -117,7 +118,7 @@ char MISCTOOLS_MENU(char ov_menu_input, bool CHECK, char *ov_uid) {
 		MISCTOOLS_MENU_CTRL(ov_menu_input, ov_uid);
 	} while ((ov_menu_input != 'e' && ov_menu_input != 't')
 		&& (ov_menu_input != 'p' && ov_menu_input != 'm')
-		&& (ov_menu_input != 'r'));
+		&& (ov_menu_input != 'r' && ov_menu_input != 'a'));
 	ov_menu_input = MISCTOOLS_OPERATION(ov_menu_input, ov_uid, CHECK);
 
 	return (ov_menu_input);

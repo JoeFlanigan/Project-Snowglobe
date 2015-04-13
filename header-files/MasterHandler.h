@@ -11,7 +11,7 @@
 //                             and is including other relevant headers during
 //                             the compilation process...
 
-#pragma warning(disable:4996 4047 24 28 13)
+#pragma warning(disable:4996 4047 24 28 13) // Do not try to compile this as release yet.
 
 // Preprocessor directives
 

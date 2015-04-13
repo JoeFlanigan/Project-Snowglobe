@@ -41,6 +41,7 @@ bool ATM_INPUT_CTRL(float, bool, char *, int);
 void MAINTENANCE_CENTER_MENU_INPUT_CTRL(char, char *);
 bool SUB_MENU_REPEAT_CTRL(char, bool, char *);
 void CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(char, char *);
+void MISCTOOLS_CTRL(char, char *);
 // Intro.c
 void ShinyIntro(void);
 // MaintenanceCenter.c
@@ -61,6 +62,7 @@ void COLOUR_GEN(void);
 char CELSIUS_FAHRENHEIT_MISCTOOL(char, bool, char *);
 char MULTIPLICATION_TABLE_M(char *, char);
 char REPEAT_MY_STRING(char, char *);
+char MARK_AVERAGE_SUM(char, char *);
 // Operation.c
 char MAIN_OPERATION(char, bool, char *);
 char MAINTENANCE_CENTER_OPERATION(char, char *);
