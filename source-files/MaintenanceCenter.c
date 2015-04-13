@@ -30,33 +30,60 @@ void CONNECTION_REPAIR(char *ov_uid) {
 		TITLES(ov_uid);
 		INC(l);
 		r[l] = system("ipconfig /release");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("ipconfig /renew");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("arp -d");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("C:\nbtstat -R");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("C:\nbtstat -RR");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("ipconfig /flushdns");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid);
+			continue;
+		}
 		INC(l);
 		Sleep(MDO);
 		r[l] = system("ipconfig /registerdns");
-		if (r[l] != NULL) INC(k);
+		if (r[l] != NULL) {
+			INC(k);
+			BB_ERROR(ov_uid); // If the console did not have had elevated rights, shout out an error and retry.
+			continue;
+		}
 		if (k == NULL) BB_SUCCESS(ov_uid); // Everything went smoothy? Sweet.
-		else if (k != NULL) BB_ERROR(ov_uid);
 	} while (k != NULL);
 }
 

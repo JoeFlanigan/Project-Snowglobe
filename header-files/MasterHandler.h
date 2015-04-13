@@ -53,7 +53,12 @@
 	#define PI (3.14159265359)             // Uh, PI. What else did you expect de moi?
 	#define CALC_SQUARE(x) ((x)*(x))       // still using pow(); and u got this here... shame on you Joey... :3
 	#define CALC_LIMIT_MIN (0)					
-	#define CALC_LIMIT_MAX (2500)	
+	#define CALC_LIMIT_MAX (2500)
+	#define CALC_ADDITION(X, Y) (((X) + (Y)))
+	#define CALC_SUBTRACTION(X, Y) (((X) - (Y)))
+	#define CALC_MULTIPLICATION(X, Y) (((X) * (Y)))
+	#define CALC_DIVISION(X, Y) (((X) / (Y)))
+	#define CALC_MODULO(X, Y) (((X) % (Y)))
 #pragma endregion CALC
 
 #pragma region MAINTENANCE
@@ -79,13 +84,17 @@
 	#define AU (EXIT)
 		#define BB (BLACKBOX)
 		#define BE (BBERROR)
+			#define CA(X, Y) (CALC_ADDITION(X, Y))
 			#define CLN (CALC_LIMIT_MIN)
 			#define CLM (CALC_LIMIT_MAX)
+			#define CM(X, Y) (CALC_MULTIPLICATION(X, Y))
 			#define CMI (CELSIUS_MINIMUM_INPUT)
 			#define CMXI (CELSIUS_MAXIMUM_INPUT)
 			#define CS (CALC_SQUARE)
+			#define CSB(X, Y) (CALC_SUBTRACTION(X, Y))
 			#define CTF(x) (CELSIUS_TO_FAHRENHEIT(x))
 				#define DEC(x) (DECREMENT(x))
+				#define DIV(X, Y) (CALC_DIVISION(X, Y))
 					#define FMI (FAHRENHEIT_MINIMUM_INPUT)
 					#define FMXI (FAHRENHEIT_MAXIMUM_INPUT)
 					#define FTC(x) (FAHRENHEIT_TO_CELSIUS(x))
@@ -93,6 +102,7 @@
 						#define ISG (INTRO_SNOWGLOBE)
 						#define ISG_L (INTRO_SNOWGLOBE_LONG)
 							#define MDO (MAINTENANCE_DONT_OVERCLOCK)
+							#define MOD(X, Y) (CALC_MODULO(X, Y))
 							#define MT (MULTIPLICATION_TABLE)
 								#define NI (NULL_INITIALIZE)
 #pragma endregion SHORTCUTS

@@ -46,6 +46,75 @@ float ATM_INPUT(bool CHECK, char *ov_uid) {
 	return (atm_input);
 }
 
+int *ATM_OPERATION(float _atm_balance) {
+	static int atm_opa[16] = { NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI };
+
+	while (_atm_balance >= 0.01f) {
+		if (_atm_balance >= 500.00) {
+			INC(atm_opa[1]);
+			_atm_balance -= 500.00f;
+		}
+		else if (_atm_balance >= 200.00) {
+			INC(atm_opa[2]);
+			_atm_balance -= 200.00f;
+		}
+		else if (_atm_balance >= 100.00) {
+			INC(atm_opa[3]);
+			_atm_balance -= 100.00f;
+		}
+		else if (_atm_balance >= 50.00) {
+			INC(atm_opa[4]);
+			_atm_balance -= 50.00f;
+		}
+		else if (_atm_balance >= 20.00) {
+			INC(atm_opa[5]);
+			_atm_balance -= 20.00f;
+		}
+		else if (_atm_balance >= 10.00) {
+			INC(atm_opa[6]);
+			_atm_balance -= 10.00f;
+		}
+		else if (_atm_balance >= 5.00) {
+			INC(atm_opa[7]);
+			_atm_balance -= 5.00f;
+		}
+		else if (_atm_balance >= 2.00) {
+			INC(atm_opa[8]);
+			_atm_balance -= 2.00f;
+		}
+		else if (_atm_balance >= 1.00) {
+			INC(atm_opa[9]);
+			_atm_balance -= 1.00f;
+		}
+		else if (_atm_balance >= 0.50) {
+			INC(atm_opa[10]);
+			_atm_balance -= 0.50f;
+		}
+		else if (_atm_balance >= 0.20) {
+			INC(atm_opa[11]);
+			_atm_balance -= 0.20f;
+		}
+		else if (_atm_balance >= 0.10) {
+			INC(atm_opa[12]);
+			_atm_balance -= 0.10f;
+		}
+		else if (_atm_balance >= 0.05) {
+			INC(atm_opa[13]);
+			_atm_balance -= 0.05f;
+		}
+		else if (_atm_balance >= 0.02) {
+			INC(atm_opa[14]);
+			_atm_balance -= 0.02f;
+		}
+		else if (_atm_balance >= 0.01) {
+			INC(atm_opa[15]);
+			_atm_balance -= 0.01f;
+		}
+	}
+
+	return (atm_opa);
+}
+
 void ATM_OUTPUT(int *_atm_opa, float _atm_balance) {
 	int i = NI;
 

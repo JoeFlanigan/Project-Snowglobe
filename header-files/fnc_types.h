@@ -12,6 +12,7 @@
 // Atm.c
 char ATM(char, bool, char *);
 float ATM_INPUT(bool, char *);
+int *ATM_OPERATION(float);
 void ATM_OUTPUT(int *, float);
 // Auth.c
 char *SG_AUTH_SYS(bool);
@@ -28,6 +29,7 @@ void BB_SUCCESS(char *);
 char CALCULATOR(char, bool, char *);
 unsigned int CALCULATOR_INPUT(bool, char *);
 char CALCULATOR_INPUT_ROP(bool, char *);
+float CALCULATOR_OPERATION(unsigned int, char, unsigned int, float);
 void CALCULATOR_OUTPUT(unsigned int, char, unsigned int, float);
 // Exit.c
 unsigned int STD_EXIT(char *);
@@ -54,17 +56,15 @@ char MIL(char);
 char TIME_DEF(char);
 void MISC_ERROR(const char *, const char *);
 char CALCULATOR_INPUT_ROP_LOWER(char);
+void COLOUR_GEN(void);
 // MiscTools.c
 char CELSIUS_FAHRENHEIT_MISCTOOL(char, bool, char *);
 char MULTIPLICATION_TABLE_M(char *, char);
 char REPEAT_MY_STRING(char, char *);
 // Operation.c
 char MAIN_OPERATION(char, bool, char *);
-float CALCULATOR_OPERATION(unsigned int, char, unsigned int, float);
-int *ATM_OPERATION(float);
 char MAINTENANCE_CENTER_OPERATION(char, char *);
 char MISCTOOLS_OPERATION(char, char *, bool);
-void COLOUR_GEN(void);
 // UI.c
 char MAIN_MENU(char, char *);
 char SUB_MENU_REPEAT(char, bool, char *);

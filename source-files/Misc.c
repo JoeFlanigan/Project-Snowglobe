@@ -68,3 +68,26 @@ void MISC_ERROR(const char *loc, const char *msg) {
 char CALCULATOR_INPUT_ROP_LOWER(char c_input_rop) {
 	return(c_input_rop = tolower(c_input_rop));
 }
+
+void COLOUR_GEN(void) {
+	unsigned int colour_c;
+	colour_c = rand() % 15;
+
+	switch (colour_c) {
+	case 1: system("color 1"); break;
+	case 2: system("color 2"); break;
+	case 3: system("color 3"); break;
+	case 4: system("color 4"); break;
+	case 5: system("color 5"); break;
+	case 6: system("color 6"); break;
+	case 7: system("color 7"); break;
+	case 8: system("color 8"); break;
+	case 9:	system("color 9"); break;
+	case 10: system("color A"); break;
+	case 11: system("color B"); break;
+	case 12: system("color C"); break;
+	case 13: system("color D"); break;
+	case 14: system("color E"); break;
+	case 15: system("color F"); break;
+	}
+}

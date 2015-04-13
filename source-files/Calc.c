@@ -68,6 +68,19 @@ char CALCULATOR_INPUT_ROP(bool CHECK, char *ov_uid) {
 	return (c_input_rop);
 }
 
+float CALCULATOR_OPERATION(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
+	switch (_rechenop) {
+	case '+': _erg = (float)CA(_no1, _no2); break;
+	case '-': _erg = CSB((float)_no1, _no2); break;
+	case '*': _erg = (float)CM(_no1, _no2); break;
+	case '/': _erg = DIV((float)_no1, _no2); break;
+	case '%': _erg = (float)MOD(_no1, _no2); break;
+	case 's': _erg = (float)pow((float)_no1, _no2); break;
+	}
+
+	return (_erg);
+}
+
 void CALCULATOR_OUTPUT(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
 	printf("\n	%u %c %u = %.3f\n", _no1, _rechenop, _no2, _erg);
 }
