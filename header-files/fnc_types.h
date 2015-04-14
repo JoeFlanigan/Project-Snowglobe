@@ -41,6 +41,7 @@ bool ATM_INPUT_CTRL(float, bool, char *, int);
 void MAINTENANCE_CENTER_MENU_INPUT_CTRL(char, char *);
 bool SUB_MENU_REPEAT_CTRL(char, bool, char *);
 void CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(char, char *);
+void MISCTOOLS_MENU_CTRL(char, char *);
 void MISCTOOLS_CTRL(char, char *);
 // Intro.c
 void ShinyIntro(void);
@@ -54,7 +55,7 @@ void BOOL_CHECK(char *);
 void TITLES(char *);
 void SG_AUTH_SYS_TITLES(void);
 char MIL(char);
-char TIME_DEF(char);
+char TIME_DEF(char [100]);
 void MISC_ERROR(const char *, const char *);
 char CALCULATOR_INPUT_ROP_LOWER(char);
 void COLOUR_GEN(void);

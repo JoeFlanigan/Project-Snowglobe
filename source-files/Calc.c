@@ -26,8 +26,8 @@ char CALCULATOR(char ov_menu_input, bool CHECK, char *ov_uid) {
 		_erg = CALCULATOR_OPERATION(_no1, _rechenop, _no2, _erg);
 		CALCULATOR_OUTPUT(_no1, _rechenop, _no2, _erg);
 		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
-		assert(ov_menu_input != NULL);
-	} while (ov_menu_input == 'r' || _no2 == NULL && _rechenop == '/');
+		assert(ov_menu_input != 0);
+	} while (ov_menu_input == 'r' || _no2 == 0 && _rechenop == '/');
 
 	return (ov_menu_input);
 }
@@ -54,6 +54,7 @@ char CALCULATOR_INPUT_ROP(bool CHECK, char *ov_uid) {
 	do {
 		CHECK = FALSE;
 		printf("\n	Choose an arithmetic operation\n");
+
 		printf("\n	+, -, *, /, %%, S => ");
 		c_input_rop = getche();
 		fflush(stdin);

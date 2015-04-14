@@ -11,7 +11,7 @@
 //                             and is including other relevant headers during
 //                             the compilation process...
 
-#pragma warning(disable:4996 4047 24 28 13) // Do not try to compile this as release yet.
+#pragma warning(disable:4996)
 
 // Preprocessor directives
 
@@ -20,9 +20,9 @@
 		#include <Windows.h>
 		#pragma message ( " WIN32 API, confirmed. Code will probably be optimized during the compilation process based on WIN32 specifications. " )
 	#elif defined(UNIX) && !defined(WIN32)
-		#error Error: UNIX OS is not supported (yet). Contact the author of this tool for support.
-		// #include <unistd.h>
-		// #pragma message ( " UNIX OS, confirmed. Code will probably be optimized during the compilation process based on UNIX specifications. " )
+		#error Error: UNIX OS is not supported (yet). Contact the author of this tool for adding a multi-platform support.
+		#include <unistd.h>
+		#pragma message ( " UNIX OS, confirmed. Code will probably be optimized during the compilation process based on UNIX specifications. " )
 	#else
 		#error Error: both cannot be defined or undefined at the same time (UNIX & WIN32)
 	#endif
@@ -109,6 +109,7 @@
 
 // Including Headers from the C-library
 
+#include <time.h>       // Used for our time function, surprise surprise. kek
 #include <assert.h>     // assert() to perform runtime checks O:
 #include <stdlib.h>     // C Standardlibrary, includes ... well, it's the standard library
 #include <stdbool.h>    // bool  in C! Yay! (many hugz) TRUE, FALSE!! :D come at me bro', missed ya'

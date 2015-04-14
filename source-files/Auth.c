@@ -42,9 +42,10 @@ char *SG_AUTH_SYS_UID_PROCESSING(void) {
 		uid_ch = getch();
 		if (uid_ch == 13) break;
 		if (uid_ch == 8) {
-			putchar("\b");
+			putch('\b');
+			putch(0);
+			putch('\b');
 			DEC(j);
-			putchar("\b");
 			continue;
 		}
 		else {
@@ -70,7 +71,9 @@ char *SG_AUTH_SYS_PW_PROCESSING(void) {
 		pw_ch = getch();
 		if (pw_ch == 13) break;
 		if (pw_ch == 8) {
-			putchar("\b \b");
+			putch('\b');
+			putch(0);
+			putch('\b');
 			DEC(i);
 			continue;
 		}
@@ -107,6 +110,7 @@ bool SG_AUTH_SYS_UID_PW_VALIDATION(bool CHECK, char *_pw, char *_uid) {
 		system("color 4");
 		printf("	Your username/password combination was wrong.\n");
 		printf("	Try again...\n");
+
 		printf("\n	Press any key to continue\n");
 		CHECK = TRUE;
 		#pragma warning(suppress: 6031)
@@ -121,6 +125,7 @@ void SG_AUTH_SYS_WELCOMEBACK(char *_uid) {
 	system("color 2");
 	printf("	Welcome back Mr./Mrs. %s.\n", _uid);
 	printf("	Have fun! :D\n");
+
 	printf("\n	~your Joe Flanigan");
 	fflush(stdin);
 	#pragma warning(suppress: 6031)

@@ -31,10 +31,12 @@ void BB_ERROR(char *ov_uid) {
 	printf("	Something went wrong. Possible cause(s)\n");
 	printf("	=> You've made an input mistake\n");
 	printf("	=> Something unexpected did happen\n");
+
 	printf("\n	About Maintenance Center problems,\n");
 	printf("	=> The maintenance Center does require\n");
 	printf("	administrative rights to run the repairs.\n");
 	printf("	Otherwise you will receive this message.\n");
+
 	printf("\n	Please retry your last action.\n");
 	printf("	Type anything to continue!");
 	zw_er = getche();

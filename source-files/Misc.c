@@ -12,7 +12,7 @@
 const static char _get_prg_author[] = "Rebirth aka Joe Flanigan";
 const static char _get_prg_crdate[] = "09/04/2015";
 const static char _get_prjct_name[] = "Project Snowglobe";
-const static char _get_prjct_vers[] = "Version 0.5.6";
+const static char _get_prjct_vers[] = "Version 0.5.9";
 const static char _get_prg_nspace[] = "--------------------------------------------------";
 
 void BOOL_CHECK(char *ov_uid) {
@@ -58,7 +58,7 @@ char TIME_DEF(char _right_now[100]) {
 	time_t now = time(0);
 	strftime(_right_now, 100, "%d/%m/%Y :: %H:%M:%S", localtime(&now));
 
-	return (_right_now);
+	return (_right_now[100]);
 }
 
 void MISC_ERROR(const char *loc, const char *msg) {

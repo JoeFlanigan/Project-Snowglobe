@@ -52,7 +52,7 @@ char CELSIUS_FAHRENHEIT_MISCTOOL(char ov_menu_input, bool CHECK, char *ov_uid) {
 			break;
 		}
 		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
-		assert(ov_menu_input != NULL);
+		assert(ov_menu_input != 0);
 	} while (ov_menu_input == 'r');
 
 	return (ov_menu_input);
@@ -96,6 +96,7 @@ char REPEAT_MY_STRING(char ov_menu_input, char *ov_uid) {
 		// scanf("%[^\t]s", _sentence); // %129[^\t]s , s = string, 129 = maximum accepted chars, [^\t] = accept spaces // Option I.
 		gets(_sentence); // Option II., the easy way. Lol
 		printf("\n	So you... %s ...right? :3\n", _sentence);
+
 		printf("\n	Press    <=> T <=> to get back to the main menu\n");
 		printf("	Or press <=> R <=> to repeat this sub-tool\n");
 		printf("	Input => ");
@@ -129,8 +130,10 @@ char MARK_AVERAGE_SUM(char ov_menu_input, char *ov_uid) {
 			printf("	Input no. %d was => %.3f\n", i, _marks[i]);
 		}
 		printf("\n	Average => %.3f , Sum => %.3f\n", _sum / 10, _sum);
+
 		printf("\n	Press    <=> T <=> to get back to the main menu\n");
 		printf("	Or press <=> R <=> to repeat this sub-tool\n");
+
 		printf("\n	Input => ");
 		ov_menu_input = getche();
 		ov_menu_input = MIL(ov_menu_input);
