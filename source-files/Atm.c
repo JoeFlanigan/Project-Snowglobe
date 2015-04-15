@@ -10,27 +10,27 @@
 //                             assemble all operations used for the
 //                             ATM machine
 
-char ATM(char ov_menu_input, bool CHECK, char *ov_uid) {
+char atmMachine(char ov_menu_input, bool CHECK, char *ov_uid) {
 	int *_atm_opa;
 	float _atm_balance;
 
 	do {
-		TITLES(ov_uid);
-		_atm_balance = ATM_INPUT(CHECK, ov_uid);
+		Titles(ov_uid);
+		_atm_balance = atmInput(CHECK, ov_uid);
 		if (_atm_balance < 0.05f) {
-			BB_ERROR(ov_uid);
+			bbError(ov_uid);
 			continue;
 		}
-		_atm_opa = ATM_OPERATION(_atm_balance);
-		ATM_OUTPUT(_atm_opa, _atm_balance);
-		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
+		_atm_opa = atmOperation(_atm_balance);
+		atmOutput(_atm_opa, _atm_balance);
+		ov_menu_input = subMenuRepeat(ov_menu_input, CHECK, ov_uid);
 		assert(ov_menu_input != 0);
 	} while (ov_menu_input == 'r' || _atm_balance < 0.05f);
 
 	return (ov_menu_input);
 }
 
-float ATM_INPUT(bool CHECK, char *ov_uid) {
+float atmInput(bool CHECK, char *ov_uid) {
 	float atm_input;
 	int r;
 
@@ -42,7 +42,7 @@ float ATM_INPUT(bool CHECK, char *ov_uid) {
 		printf("\n	Input a number between 0.05 and 759000 => ");
 		r = scanf("%f", &atm_input);
 		fflush(stdin);
-		CHECK = ATM_INPUT_CTRL(atm_input, CHECK, ov_uid, r);
+		CHECK = atmInputCtrl(atm_input, CHECK, ov_uid, r);
 	} while ((atm_input > ALM || atm_input < ALN)
 		|| (CHECK != FALSE || r != 1));
 
@@ -51,7 +51,7 @@ float ATM_INPUT(bool CHECK, char *ov_uid) {
 
 // This function will store our output in the "atm_opa[16]" array, which we will
 // access with a pointer later on. It's quite easy, yo.
-int *ATM_OPERATION(float _atm_balance) {
+int *atmOperation(float _atm_balance) {
 	static int atm_opa[16] = { NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI, NI };
 
 	while (_atm_balance >= 0.01f) {
@@ -120,7 +120,7 @@ int *ATM_OPERATION(float _atm_balance) {
 	return (atm_opa);
 }
 
-void ATM_OUTPUT(int *_atm_opa, float _atm_balance) {
+void atmOutput(int *_atm_opa, float _atm_balance) {
 	int i = NI;
 
 	INC(i);

@@ -1,5 +1,12 @@
 #include "MasterHandler.h"
 
+#if !defined(INTRO_SNOWGLOBE_TMR) && !defined(INTRO_SNOWGLOBE_TMR_LONG)
+	#define INTRO_SNOWGLOBE_TMR (1250)
+	#define INTRO_SNOWGLOBE_TMER_LONG (2001)
+#else
+	#error Error: macro-mess found in Intro.c, go away. Please.
+#endif
+
 //                       PJ; SNOWGLOBE -RB
 //                   <===|===><==|==><===|===>
 //                            
@@ -7,20 +14,20 @@
 //     Author Name          => "Rebirth" aka "Joe Flanigan"
 //                            
 //     File Description	    => Never forget about snowglobe! This
-//                             awesome intro will make you help not to!
+//                             awesome intro will make you help not to do so!
 
-void ShinyIntro(void) {
+void shinyIntro(void) {
 	int j = NI;
 	bool SI = FALSE;
 
 	for (; 1;) {
-		BB_SHORT();
+		bbShort();
 		INC(j);
-		COLOUR_GEN();
+		colourGen();
 		printf("	This  tool  was made by Joe Flanigan aka  Rebirth\n");
 		printf("	<===============================================>\n");
-		Sleep(ISG);													 
-		COLOUR_GEN();
+		Sleep(INTRO_SNOWGLOBE_TMR);
+		colourGen();
 #pragma region intro_1
 		printf("	,------.                ,--.               ,--.   ");
 		printf("\n");
@@ -35,8 +42,8 @@ void ShinyIntro(void) {
 		printf("	                      '---'                       ");
 		printf("\n");
 #pragma endregion intro_1
-		Sleep(ISG);
-		COLOUR_GEN();
+		Sleep(INTRO_SNOWGLOBE_TMR);
+		colourGen();
 #pragma region intro_2
 		printf("	 ,---.                                    ");
 		printf("\n");
@@ -50,8 +57,8 @@ void ShinyIntro(void) {
 		printf("\n");
 #pragma endregion intro_2
 		INC(j);
-		Sleep(ISG);
-		COLOUR_GEN();
+		Sleep(INTRO_SNOWGLOBE_TMR);
+		colourGen();
 #pragma region intro_3
 		printf("			       ,--.       ,--.           ");
 		printf("\n");
@@ -66,9 +73,12 @@ void ShinyIntro(void) {
 		printf("			`---'                            ");
 		printf("\n");
 #pragma endregion intro_3
-		Sleep(ISG_L);
+		Sleep(INTRO_SNOWGLOBE_TMER_LONG);
 		INC(j);
 		if (j < 6) continue;
 		break;
 	}
 }
+
+#undef INTRO_SNOWGLOBE_TMR
+#undef INTRO_SNOWGLOBE_TMR_LONG
