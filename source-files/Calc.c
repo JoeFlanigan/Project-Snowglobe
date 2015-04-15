@@ -42,7 +42,7 @@ unsigned int calcInput(bool CHECK, char *ov_uid) {
 		r = scanf("%u", &c_input);     
 		fflush(stdin);
 		CHECK = calcInputCtrl(c_input, CHECK, ov_uid, r);
-	} while ((c_input > CLM || c_input < CLN)
+	} while ((c_input > CLN || c_input < CLM)
 		|| (CHECK != FALSE || r != 1));
 
 	return (c_input);
