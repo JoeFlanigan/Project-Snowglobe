@@ -1,11 +1,5 @@
 #include "MasterHandler.h"
 
-#ifndef BLACK_BOX_TMR
-	#define BLACK_BOX_TMR (2499)
-#else
-	#error Error: macro-mess found in BlackBox.c, go away. Please.
-#endif
-
 //                       PJ; SNOWGLOBE -RB
 //                   <===|===><==|==><===|===>
 //                            
@@ -16,23 +10,23 @@
 //                             console colour/size etc, back to default
 //                             and clear the output whenever we call for it
 
-void bbShort(void) {
+void BB_SHORT(void) {
 	system("color F");
 	fflush(stdin);
 	system("cls");
 }
 
-void bbLoading(char *ov_uid) {
-	Titles(ov_uid);				
+void BB_LOADING(char *ov_uid) {
+	TITLES(ov_uid);				
 	printf("	Loading, please be patient.\n");
-	Sleep(BLACK_BOX_TMR);
-	bbShort();
+	Sleep(BB);
+	BB_SHORT();
 }
 
-void bbError(char *ov_uid) {
+void BB_ERROR(char *ov_uid) {
 	char zw_er;
 
-	Titles(ov_uid);
+	TITLES(ov_uid);
 	system("color 4");
 	printf("	Something went wrong. Possible cause(s)\n");
 	printf("	=> You've made an input mistake\n");
@@ -46,13 +40,11 @@ void bbError(char *ov_uid) {
 	printf("\n	Please retry your last action.\n");
 	printf("	Type anything to continue!");
 	zw_er = getche();
-	bbShort();
+	BB_SHORT();
 }
 
-void bbSuccess(char *ov_uid) {
-	Titles(ov_uid);
+void BB_SUCCESS(char *ov_uid) {
+	TITLES(ov_uid);
 	system("color 2");
 	printf("	The operation was successfully executed.\n");
 }
-
-#undef BLACK_BOX_TMR

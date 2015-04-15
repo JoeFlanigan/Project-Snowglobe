@@ -9,30 +9,30 @@
 //     File Description	    => This file will assemble all functions
 //                             we will need for the calculator
 
-char calc(char ov_menu_input, bool CHECK, char *ov_uid) {
+char CALCULATOR(char ov_menu_input, bool CHECK, char *ov_uid) {
 	unsigned int _no1, _no2;
 	char _rechenop;
 	float _erg = NI;
 
 	do {
-		Titles(ov_uid);
-		_no1 = calcInput(CHECK, ov_uid);
-		_rechenop = calcInputRop(CHECK, ov_uid);
-		_no2 = calcInput(CHECK, ov_uid);
+		TITLES(ov_uid);
+		_no1 = CALCULATOR_INPUT(CHECK, ov_uid);
+		_rechenop = CALCULATOR_INPUT_ROP(CHECK, ov_uid);
+		_no2 = CALCULATOR_INPUT(CHECK, ov_uid);
 		if (_no2 == 0 && _rechenop == '/') {
-			bbError(ov_uid);
+			BB_ERROR(ov_uid);
 			continue;
 		}
-		_erg = calcOperation(_no1, _rechenop, _no2, _erg);
-		calcOutput(_no1, _rechenop, _no2, _erg);
-		ov_menu_input = subMenuRepeat(ov_menu_input, CHECK, ov_uid);
+		_erg = CALCULATOR_OPERATION(_no1, _rechenop, _no2, _erg);
+		CALCULATOR_OUTPUT(_no1, _rechenop, _no2, _erg);
+		ov_menu_input = SUB_MENU_REPEAT(ov_menu_input, CHECK, ov_uid);
 		assert(ov_menu_input != 0);
 	} while (ov_menu_input == 'r' || _no2 == 0 && _rechenop == '/');
 
 	return (ov_menu_input);
 }
 
-unsigned int calcInput(bool CHECK, char *ov_uid) {
+unsigned int CALCULATOR_INPUT(bool CHECK, char *ov_uid) {
 	unsigned int c_input;
 	int r;
 
@@ -41,14 +41,14 @@ unsigned int calcInput(bool CHECK, char *ov_uid) {
 		printf("\n	Input a number between 0 and 2500 => ");
 		r = scanf("%u", &c_input);     
 		fflush(stdin);
-		CHECK = calcInputCtrl(c_input, CHECK, ov_uid, r);
+		CHECK = CALCULATOR_INPUT_CTRL(c_input, CHECK, ov_uid, r);
 	} while ((c_input > CLM || c_input < CLN)
 		|| (CHECK != FALSE || r != 1));
 
 	return (c_input);
 }
 
-char calcInputRop(bool CHECK, char *ov_uid) {
+char CALCULATOR_INPUT_ROP(bool CHECK, char *ov_uid) {
 	char c_input_rop;
 
 	do {
@@ -59,8 +59,8 @@ char calcInputRop(bool CHECK, char *ov_uid) {
 		c_input_rop = getche();
 		fflush(stdin);
 		printf("\n");
-		c_input_rop = calcInputRopLower(c_input_rop);
-		CHECK = calcInputRopCtrl(c_input_rop, CHECK, ov_uid);
+		c_input_rop = CALCULATOR_INPUT_ROP_LOWER(c_input_rop);
+		CHECK = CALCULATOR_INPUT_ROP_CTRL(c_input_rop, CHECK, ov_uid);
 	} while ((c_input_rop != '+' && c_input_rop != '-')
 		&& (c_input_rop != '*' && c_input_rop != '/')
 		&& (c_input_rop != '%' && c_input_rop != 's')
@@ -69,19 +69,19 @@ char calcInputRop(bool CHECK, char *ov_uid) {
 	return (c_input_rop);
 }
 
-float calcOperation(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
+float CALCULATOR_OPERATION(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
 	switch (_rechenop) {
-	case '+': _erg = (float)CALC_ADDITION(_no1, _no2); break;
-	case '-': _erg = CALC_SUBTRACTION((float)_no1, _no2); break;
-	case '*': _erg = (float)CALC_MULTIPLICATION(_no1, _no2); break;
-	case '/': _erg = CALC_DIVISION((float)_no1, _no2); break;
-	case '%': _erg = (float)CALC_MODULO(_no1, _no2); break;
+	case '+': _erg = (float)CA(_no1, _no2); break;
+	case '-': _erg = CSB((float)_no1, _no2); break;
+	case '*': _erg = (float)CM(_no1, _no2); break;
+	case '/': _erg = DIV((float)_no1, _no2); break;
+	case '%': _erg = (float)MOD(_no1, _no2); break;
 	case 's': _erg = (float)pow((float)_no1, _no2); break;
 	}
 
 	return (_erg);
 }
 
-void calcOutput(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
+void CALCULATOR_OUTPUT(unsigned int _no1, char _rechenop, unsigned int _no2, float _erg) {
 	printf("\n	%u %c %u = %.3f\n", _no1, _rechenop, _no2, _erg);
 }

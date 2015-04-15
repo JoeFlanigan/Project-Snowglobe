@@ -10,69 +10,69 @@
 //     File Description	    => This file will store our function prototypes
 
 // Atm.c
-char atmMachine(char, bool, char *);
-float atmInput(bool, char *);
-int *atmOperation(float);
-void atmOutput(int *, float);
+char ATM(char, bool, char *);
+float ATM_INPUT(bool, char *);
+int *ATM_OPERATION(float);
+void ATM_OUTPUT(int *, float);
 // Auth.c
-char *snowglobeAuthMe(bool);
-char *snowglobeAuthMeUID(void);
-char *snowglobeAuthMePW(void);
-bool snowglobeAuthMeValidator(bool, char *, char *);
-void snowglobeAuthMeWB(char *);
+char *SG_AUTH_SYS(bool);
+char *SG_AUTH_SYS_UID_PROCESSING(void);
+char *SG_AUTH_SYS_PW_PROCESSING(void);
+bool SG_AUTH_SYS_UID_PW_VALIDATION(bool, char *, char *);
+void SG_AUTH_SYS_WELCOMEBACK(char *);
 // BlackBox.c
-void bbShort(void);
-void bbLoading(char *);
-void bbError(char *);
-void bbSuccess(char *);
+void BB_SHORT(void);
+void BB_LOADING(char *);
+void BB_ERROR(char *);
+void BB_SUCCESS(char *);
 // Calc.c
-char calc(char, bool, char *);
-unsigned int calcInput(bool, char *);
-char calcInputRop(bool, char *);
-float calcOperation(unsigned int, char, unsigned int, float);
-void calcOutput(unsigned int, char, unsigned int, float);
+char CALCULATOR(char, bool, char *);
+unsigned int CALCULATOR_INPUT(bool, char *);
+char CALCULATOR_INPUT_ROP(bool, char *);
+float CALCULATOR_OPERATION(unsigned int, char, unsigned int, float);
+void CALCULATOR_OUTPUT(unsigned int, char, unsigned int, float);
 // Exit.c
-unsigned int stdExit(char *);
+unsigned int STD_EXIT(char *);
 // Input_Ctrl.c
-void mmInputCtrl(char, char *); // main menu input ctrl
-bool calcInputRopCtrl(char, bool, char *);
-bool calcInputCtrl(unsigned int, bool, char *, int);
-bool atmInputCtrl(float, bool, char *, int);
-void mcmInputCtrl(char, char *); // maintenance center menu input ctrl
-bool subRepeatCtrl(char, bool, char *);
-void cfMiscToolsCtrl(char, char *); // celsius fahrenheit thingy
-void miscToolsMenuCtrl(char, char *);
-void miscToolsCtrl(char, char *);
+void MAIN_MENU_INPUT_CTRL(char, char *);
+bool CALCULATOR_INPUT_ROP_CTRL(char, bool, char *);
+bool CALCULATOR_INPUT_CTRL(unsigned int, bool, char *, int);
+bool ATM_INPUT_CTRL(float, bool, char *, int);
+void MAINTENANCE_CENTER_MENU_INPUT_CTRL(char, char *);
+bool SUB_MENU_REPEAT_CTRL(char, bool, char *);
+void CELSIUS_FAHRENHEIT_MISCTOOL_MENU_CTRL(char, char *);
+void MISCTOOLS_MENU_CTRL(char, char *);
+void MISCTOOLS_CTRL(char, char *);
 // Intro.c
-void shinyIntro(void);
+void ShinyIntro(void);
 // MaintenanceCenter.c
-char maintenanceCenter(char, bool, char *);
-void connectionRepair(char *);
-void diskRepairScan(char *);
-void diskRepairOp(char *);
+char MAINTENANCE_CENTER(char, bool, char *);
+void CONNECTION_REPAIR(char *);
+void DISK_REPAIR_SCAN(char *);
+void DISK_REPAIR_OPERATION(char *);
 // Misc.c
-void checkforBool(char *);
-void Titles(char *);
-void snowglobeAuthMeTitles(void);
-char ovInputLower(char);
-char setTime(char [100]);
-void miscError(const char *, const char *); // #404
-char calcInputRopLower(char);
-void colourGen(void);
+void BOOL_CHECK(char *);
+void TITLES(char *);
+void SG_AUTH_SYS_TITLES(void);
+char MIL(char);
+char TIME_DEF(char [100]);
+void MISC_ERROR(const char *, const char *);
+char CALCULATOR_INPUT_ROP_LOWER(char);
+void COLOUR_GEN(void);
 // MiscTools.c
-char celfahMiscTool(char, bool, char *);
-char multiplicationTable(char *, char);
-char repeatMe(char, char *);
-char markAverageSum(char, char *);
+char CELSIUS_FAHRENHEIT_MISCTOOL(char, bool, char *);
+char MULTIPLICATION_TABLE_M(char *, char);
+char REPEAT_MY_STRING(char, char *);
+char MARK_AVERAGE_SUM(char, char *);
 // Operation.c
-char primaryOp(char, bool, char *);
-char mcOp(char, char *); // maintenance center operation
-char miscToolsOp(char, char *, bool);
+char MAIN_OPERATION(char, bool, char *);
+char MAINTENANCE_CENTER_OPERATION(char, char *);
+char MISCTOOLS_OPERATION(char, char *, bool);
 // UI.c
-char mainMenu(char, char *);
-char subMenuRepeat(char, bool, char *);
-char mcMenu(char, char *); // Maintenance center
-char cfMenu(char, char *); // Celsius Fahrenheit
-char miscToolsMenu(char, bool, char *);
+char MAIN_MENU(char, char *);
+char SUB_MENU_REPEAT(char, bool, char *);
+char MAINTENANCE_CENTER_MENU(char, char *);
+char CELSIUS_FAHRENHEIT_MISCTOOL_MENU(char, char *);
+char MISCTOOLS_MENU(char, bool, char *);
 
 #endif
